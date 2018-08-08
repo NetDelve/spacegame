@@ -1,0 +1,7 @@
+[package]
+name = "spacegame"
+version = "0.1.0"
+authors = ["nutcase84 <nutcase84@protonmail.com>"]
+
+[dependencies]
+ggez = "0.4"
