@@ -1,27 +1,12 @@
-use std::collections::VecDeque;
-
-struct RenderQueue<T> {
-	temporary: bool, // remove items after rendering
-	queue: VecDeque<T>,
+struct TileMapRenderObject {
+	x: i32,
+	y: i32,
+	id: usize, // Individual tile to draw on tilemap
+	tilemap: TilemapTypeHere,
 }
 
-impl<T> RenderQueue<T> {
-	/// Creates an empty 'RenderQueue'.
-	fn new(temporary: bool, capacity: usize) -> Self {
-		Self {
-			temporary,
-			queue: VecDeque::with_capacity(capacity),
-		}
+impl TileMapRenderObject {
+	pub fn render(&self) {
+		
 	}
-	/// Renders all objects in queue
-	fn render(&mut self) -> Result<()> {
-		for object in self.queue {
-			object.render()?;
-		}
-		Ok(())
-	}
-}
-
-struct RenderImage {
-	
 }
